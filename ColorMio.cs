@@ -51,16 +51,16 @@ namespace ColorMio
         private unsafe void Hooks()
         {
             On.MioGame.GlobalFunctions.game.On_renderer.render_tentacle_2.Prefix += Render_tentacle_prefix;
-            On.MioGame.On_Game.fixed_update.Prefix += Fixed_update_prefix;
+            //On.MioGame.On_Game.fixed_update.Prefix += Fixed_update_prefix;
         }
 
         private unsafe void Fixed_update_prefix(Game* __this)
         {
-            ref var mio = ref __this->mio;
-            fixed (Mio* ptr = &mio) 
-            {
-                MioGame.GlobalFunctions.game.mio.mio_head_color(ptr);
-            }
+            //ref var mio = ref __this->mio;
+            //fixed (Mio* ptr = &mio) 
+            //{
+            //    MioGame.GlobalFunctions.game.mio.mio_head_color(ptr);
+            //}
             
         }
 
