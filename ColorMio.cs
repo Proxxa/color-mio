@@ -88,13 +88,13 @@ namespace ColorMio
             switch (channel)
             {
                 case "red":
-                    color.x = value;
+                    color.x = value / 255f;
                     break;
                 case "green":
-                    color.y = value;
+                    color.y = value / 255f;
                     break;
                 case "blue":
-                    color.z = value;
+                    color.z = value / 255f;
                     break;
             }
         }
